@@ -27,9 +27,9 @@ export function initQuiz() {
       question: "3. What is our absolute go-to date spot when we want something quick and comforting?",
       options: [
         "McDonald's",
-        "A local roadside Chinese fast food joint",
-        "A nice cozy cafe in the city",
-        "Dominos Pizza"
+        "Panipuri wala dada",
+        "A nice cozy cafe",
+        "Cal B"
       ],
       correct: 0
     },
@@ -39,7 +39,7 @@ export function initQuiz() {
         "Cheesy Chicken Dominator Calzone Pocket",
         "Butter Chicken with Garlic Naan",
         "Classic Cheese Loaded Burger & Fries",
-        "Chicken Biryani from a local spot"
+        "Momos"
       ],
       correct: 0
     }
