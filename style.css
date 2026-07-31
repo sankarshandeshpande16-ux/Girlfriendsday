@@ -1,0 +1,248 @@
+:root {
+  --bg-gradient: radial-gradient(circle at 50% 0%, #2b0e1b 0%, #0d0408 100%);
+  --glass-card: rgba(36, 14, 25, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --accent-rose: #e65c82;
+  --accent-rose-dark: #bc3b5e;
+  --accent-gold: #f3a683;
+  --text-main: #fcedf2;
+  --text-muted: #c9a3b4;
+  --shadow-glow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --border-radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+  overflow-x: hidden;
+}
+
+/* Ambient Blurs */
+.ambient-blur {
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(230, 92, 130, 0.15) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blur-top { top: -100px; left: -100px; }
+.blur-bottom { bottom: -100px; right: -100px; }
+
+.app-container {
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 1;
+}
+
+/* Cards */
+.card {
+  background: var(--glass-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-glow);
+}
+
+/* Audio Module */
+.audio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.8rem;
+}
+
+.audio-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.audio-icon { font-size: 1.8rem; }
+.audio-title { font-size: 1rem; font-weight: 600; }
+.audio-subtitle { font-size: 0.8rem; color: var(--text-muted); }
+
+/* Typography & Badges */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #ffffff 30%, var(--accent-rose) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0.8rem 0;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: var(--accent-rose);
+  margin-bottom: 0.6rem;
+}
+
+.badge {
+  display: table;
+  margin: 0 auto;
+  background: rgba(230, 92, 130, 0.15);
+  border: 1px solid var(--accent-rose);
+  color: var(--accent-rose);
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.badge-sub {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.letter-body {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-top: 1rem;
+  white-space: pre-line;
+}
+
+.signature {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--accent-gold);
+  text-align: right;
+  margin-top: 1.5rem;
+}
+
+.section-desc {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Canvas Bouquet Builder */
+.canvas-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.canvas-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+#bouquetCanvas {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  cursor: crosshair;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-rose), var(--accent-rose-dark));
+  box-shadow: 0 4px 15px rgba(230, 92, 130, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(230, 92, 130, 0.5);
+}
+
+.btn-type {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+}
+
+.btn-type.active, .btn-type:hover {
+  background: rgba(230, 92, 130, 0.2);
+  border-color: var(--accent-rose);
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent-rose);
+  color: var(--accent-rose);
+}
+
+.btn-outline:hover {
+  background: rgba(230, 92, 130, 0.15);
+}
+
+/* Quiz List */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 1.2rem;
+}
+
+.option-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
+  padding: 1.1rem 1.3rem;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.option-btn:hover {
+  background: rgba(230, 92, 130, 0.15);
+  border-color: var(--accent-rose);
+}
+
+.option-btn.correct {
+  background: rgba(46, 204, 113, 0.25) !important;
+  border-color: #2ecc71 !important;
+}
+
+.option-btn.wrong {
+  background: rgba(231, 76, 60, 0.25) !important;
+  border-color: #e74c3c !important;
+}
