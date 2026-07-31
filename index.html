@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Favorite Person ❤️</title>
+  
+  <!-- Typography & Styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Floating Background Ambient Elements -->
+  <div class="ambient-blur blur-top"></div>
+  <div class="ambient-blur blur-bottom"></div>
+
+  <main class="app-container">
+    
+    <!-- Module: Audio Header Bar -->
+    <header class="card audio-header">
+      <div class="audio-info">
+        <span class="audio-icon">🎵</span>
+        <div>
+          <h3 class="audio-title">Atmospheric Piano</h3>
+          <p class="audio-subtitle">Tap play for background ambient music</p>
+        </div>
+      </div>
+      <button id="musicToggle" class="btn btn-primary">▶ Play Music</button>
+      <audio id="bgAudio" loop preload="none">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-piano-112185.mp3" type="audio/mpeg">
+      </audio>
+    </header>
+
+    <!-- Module: Hero Love Letter -->
+    <section class="card letter-section">
+      <div class="badge">Crafted Specially For You</div>
+      <h1>Happy Girlfriend's Day</h1>
+      <article class="letter-body">
+        Every single day with you feels like a gift, but today is a special excuse to remind you how deeply loved and appreciated you are.
+
+        Thank you for bringing so much laughter, comfort, and warmth into my life. I built this interactive app just for you—build your own custom flower bouquet below and test your memory in our relationship quiz!
+      </article>
+      <div class="signature">Forever yours ❤️</div>
+    </section>
+
+    <!-- Module: Interactive Canvas Bouquet Generator -->
+    <section class="card bouquet-generator-section">
+      <h2>Interactive Bouquet Generator</h2>
+      <p class="section-desc">Tap inside the canvas below to grow custom blooming flowers and build your personalized bouquet!</p>
+
+      <div class="canvas-controls">
+        <button class="btn btn-type active" data-type="rose">🌹 Rose</button>
+        <button class="btn btn-type" data-type="tulip">🌷 Tulip</button>
+        <button class="btn btn-type" data-type="sunflower">🌻 Sunflower</button>
+        <button id="clearCanvas" class="btn btn-outline">🔄 Reset Bouquet</button>
+      </div>
+
+      <div class="canvas-wrapper">
+        <canvas id="bouquetCanvas" width="600" height="400"></canvas>
+      </div>
+    </section>
+
+    <!-- Module: Relationship Quiz Engine -->
+    <section class="card quiz-section">
+      <h2>How Well Do You Know Us?</h2>
+      <div id="quizApp">
+        <div class="quiz-header">
+          <span id="quizBadge" class="badge-sub">Question 1 of 4</span>
+        </div>
+        <h3 id="quizQuestion" class="quiz-question">Loading Question...</h3>
+        <div id="quizOptions" class="options-list"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ES6 Modules Entry Point -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
