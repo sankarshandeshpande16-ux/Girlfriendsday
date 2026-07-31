@@ -6,8 +6,9 @@ export function initQuiz() {
     {
       question: "1. What is my absolute favorite place to rest and completely relax?",
       options: [
-        "Your lap while your fingers run through my hair",
+        
         "Lying down on the couch scrolling on my phone",
+        "Your lap while your fingers run through my hair",
         "In bed after a long day of studying",
         "On a comfortable chair while listening to music"
       ],
@@ -26,10 +27,11 @@ export function initQuiz() {
     {
       question: "3. What is our absolute go-to date spot when we want something quick and comforting?",
       options: [
-        "McDonald's",
+        
         "Panipuri wala dada",
         "A nice cozy cafe",
-        "Cal B"
+        "Cal B",
+        "McDonald's"
       ],
       correct: 0
     },
