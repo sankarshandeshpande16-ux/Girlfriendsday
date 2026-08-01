@@ -12,7 +12,7 @@ export function initQuiz() {
         "In bed after a long day of studying",
         "On a comfortable chair while listening to music"
       ],
-      correct: 0
+      correct: 1
     },
     {
       question: "2. What do I usually end up doing when I miss you a lot?",
@@ -33,7 +33,7 @@ export function initQuiz() {
         "Cal B",
         "McDonald's"
       ],
-      correct: 0
+      correct: 3
     },
     {
       question: "4. What is our favorite thing to order and eat together when we crave something good?",
